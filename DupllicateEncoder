@@ -1,0 +1,31 @@
+function duplicateEncode(word){
+  
+  const normalizedString = word.toLowerCase();
+  
+  let resultString = '';
+  
+  let characterCounts = {};
+  
+  for (let char of normalizedString) {
+    if (char in characterCounts) {
+      characterCounts[char]++;
+    } else {
+      characterCounts[char] = 1;
+    }
+  }
+  
+  for (let char of normalizedString) {
+    
+    if (characterCounts[char] === 1) {
+    
+      resultString += '(';
+    
+    } else {
+    
+      resultString += ')';
+    }
+  }
+  
+  return resultString;
+  
+}
