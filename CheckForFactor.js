@@ -11,4 +11,4 @@ function checkForFactor (base, factor) {
       return false;
     
     }
-  }
+}
